@@ -8,12 +8,6 @@
 
 <nav th:replace="fragments :: navigation"></nav>
 
-<hr />
-
-<nav>
-    <a href="/category/add">Add Category</a>
-</nav>
-
 <br />
 
 <p th:unless="${categories} and ${categories.size()}">No categories :(</p>
@@ -29,6 +23,12 @@
     </tr>
 
 </table>
+
+<hr />
+
+<nav>
+    <a href="/category/add">Add Category</a>
+</nav>
 
 </body>
 </html>
