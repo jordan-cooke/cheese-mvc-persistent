@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<body class="container body-content">
+
+<h1 th:text="${title}">Default Title</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+<hr />
+<h3 th:text="${category.name} + ' Cheese'"></h3>
+
+<div>
+    <ul>
+        <li th:each="cheese : ${cheeses}" th:text="${cheese.name}"></li>
+    </ul>
+</div>
+
+</body>
+</html>
